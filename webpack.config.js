@@ -30,7 +30,9 @@ module.exports = {
         // 别名
         alias:{
             '@':path.resolve('src'),
-            '@components':path.resolve(__dirname,'./src/components'),            
+            '@components':path.resolve(__dirname,'./src/components'),
+            '@common':path.resolve(__dirname,'./src/common'),
+            '@less':path.resolve(__dirname,'./src/less')
         },
         extensions:['.js','.json']
     },
@@ -44,16 +46,12 @@ module.exports = {
                 test:/\.js$/,
                 exclude:path.resolve(__dirname,'./node_modules'),
                 use:{
-                    loader:'babel-loader',
+                    loader:require.resolve('babel-loader'),
                     // 配置loader选项
                     options:{
                         presets:['env','react','stage-0'], //编译ES6->ES5,JSX->JS
                         plugins: [
-                            ["import", {
-                              "libraryName": "antd-mobile",
-                              "libraryDirectory": "es",
-                              "style": "css" // `style: true` 会加载 less 文件
-                            }]
+                            ["import", { libraryName: "antd-mobile", style: "css" }]
                         ]
                     }
                 }
