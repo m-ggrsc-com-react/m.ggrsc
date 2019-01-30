@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
+   
     // 入口文件
     entry:{
         main:'./src/main.js',
@@ -92,5 +93,6 @@ module.exports = {
         
         // 每次编译先清除dist目录
         new CleanWebpackPlugin('dist')
-    ]
+    ],
+    
 }

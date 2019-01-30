@@ -5,10 +5,19 @@ import Footer from "@common/Footer" ;
 
 class App extends Component {
 	
+	constructor (){
+		super();
+
+		this.current = this.current.bind(this);
+	}
+
+	current(){
+		console.log(0)
+	}
+
 	render(){
 		return (
-			<div>
-				发顺丰
+			<div>				
 				<Footer />
 			</div>
 		)
