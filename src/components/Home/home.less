@@ -100,13 +100,14 @@
 
 }
 
-
 // HomeNav 组件样式
 .HomeNav{
     .w(375);
     .h(160);
-    background:#fcf;
     display: flex;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    margin:0;    
 
     img{
         .w(22);
@@ -115,32 +116,122 @@
 
     li{
         .w(75);
-        .h(80);
-        display: flex;
-        justify-content: center;
         text-align: center;
-        background:#fc0;
-        .mt(6);
-
         a{
             display: inline-block;
             width: 100%;
             height: 100%;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+
             span{
                 display: block;
+                
                 .w(44);
                 .h(44);
                 background: red;
                 border-radius: 50%;
                 display: flex;
-                align-items: center;
-                margin:auto;
-                .mb(5);
-                img{
-                    margin:auto;
-                }
+                justify-content:center;
+                align-items: center;               
+            }
+            p{
+                margin:0!important;
+                color: #555;
+                .fs(12);
             }
         }
     }
+    
+    li:nth-of-type(1) span{
+        background:#fb6e52;
+    }
+    li:nth-of-type(2) span{
+        background:#48cfae;        
+    }
+    li:nth-of-type(3) span{
+        background:#4fc0e8;        
+    }
+    li:nth-of-type(4) span{
+        background:#ac92ed;        
+    }
+    li:nth-of-type(5) span{
+        background:#ff9300;
+    }
+    li:nth-of-type(6) span{
+        background:#62ba1e;
+    }
+    li:nth-of-type(7) span{
+        background:#1a8de5;
+    }
+    li:nth-of-type(8) span{
+        background:#ec87bf;
+    }
+    li:nth-of-type(9) span{
+        background:#fde916;
+    }
+    li:nth-of-type(10) span{
+        background:#356bf1;
+    }
 
+}
+
+// 最新公告
+.Notice{
+    .w(375);
+    .h(60);
+    .padding(0,10,0,10);
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+    a{
+        color: #676b70;
+        .fs(12);
+    }
+
+    .Notice_img{
+        .w(54)!important;
+        .h(40) !important;
+    }
+    
+    .Notice_Item{
+        .w(258);
+        .h(40);
+        .lh(40);
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        img{            
+            .w(22);
+            .h(22);
+        }
+        .swiper-container {
+            position: absolute;
+            right: 0;
+            display: block;
+            .w(230);
+            height: 100%;
+            
+            .swiper-slide {
+                .fs(12);
+                text-align-last: left;
+                color:#333;
+                width: 100%;
+                height: 100%;
+                overflow:hidden;
+                text-overflow:ellipsis;
+                white-space:nowrap;
+            }
+
+          }
+    }
+}
+
+.nctouch-home-layout{
+    background:red;
+    .h(1000);
 }

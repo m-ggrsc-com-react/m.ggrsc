@@ -4,8 +4,6 @@ import React,{Component} from "react" ;
 import Footer from "@common/Footer" ;
 import http from "@/server.js" ;
 
-// 引入 antd 框架组件
-import { Carousel } from 'antd';
 
 // 引入样式
 import "./home.less" ;
@@ -14,6 +12,8 @@ import "./home.less" ;
 import Banner from "./Banner" ;
 import Header from "./Header" ;
 import HomeNav from "./HomeNav" ;
+import Notice from "./Notice" ;
+import HomeAlike from "@/common/Home_alike" ;
 
 
 
@@ -28,6 +28,7 @@ class Home extends Component {
     async componentDidMount(){
         const res = await http.get("/api/mobile/index.php/",{act:"index"}) ; 
         this.setState({data:res.data.datas}) ;
+        console.log(this.state.data)
     }
     
     render(){
@@ -37,6 +38,8 @@ class Home extends Component {
                     <Header/>
                     <Banner bannerText={this.state.data[0]}/>
                     <HomeNav/>
+                    <Notice/>
+                    <HomeAlike data={this.state.data[2]} />
                 </div>
             )
         }else{

@@ -36,7 +36,7 @@ class HomeNav extends Component {
                     },
                 ],
                 
-                HomeNav_bottm:[
+                HomeNav_bottom:[
                     {
                         path:"/My",
                         title:"我的商城",
@@ -72,6 +72,13 @@ class HomeNav extends Component {
             <ul className="HomeNav">
                 {
                     this.state.data.HomeNav_top.map((item,idx)=>{
+                        return (
+                            <HomeNav_item item={item} key={idx}/>
+                        )
+                    })
+                }
+                 {
+                    this.state.data.HomeNav_bottom.map((item,idx)=>{
                         return (
                             <HomeNav_item item={item} key={idx}/>
                         )
