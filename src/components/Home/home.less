@@ -1,0 +1,146 @@
+@import "../../less/main.less";
+
+//   Header 组件样式
+#header {
+    position: fixed;
+    .w(375);
+    .h(40);
+    background:#f8f8f8;
+    z-index: 9999 !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+
+    .logo {
+        .w(60);
+        .h(30);
+        background-image: url(http://img.ggrsc.com/common/home_logo.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 100%;
+        .ml(10);
+    }
+
+    .header-wrap{
+        overflow: hidden;
+
+        .header-inp{
+            display: inline-block;
+            .w(250);
+            .h(30);
+            background:#fff;
+            border:1px #DEDEDE solid;
+            .border-radius(6);
+            display: flex;
+            align-items:center;            
+
+            i{
+                display: inline-block;
+                .w(15);
+                .h(15);
+                background-image: url(http://m.ggrsc.com/images/search_ico.png);
+                background-size:cover;
+                .margin(0,6,0,6);
+            }
+            span{
+                color: #bbb;                
+            }
+        }
+    }
+
+    .header-r{
+        overflow: hidden;
+        height: 100%;      
+        .mr(10);
+
+        a{
+            display: inline-block;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+        text-align: center;
+        align-items:center;
+
+            i{
+                display: inline-block;
+                .w(22);
+                .h(22);
+                background:url(http://m.ggrsc.com/images/message_b.png);
+                background-size: cover;
+                opacity: 0.55;
+            }
+        }
+    }
+
+}
+
+// banner 组件样式
+.ant-carousel {
+    overflow: hidden;
+
+    .slick-slide {
+        text-align: center;    
+        .w(375) !important;
+        .h(220);
+        .lh(200);
+        .mt(40);
+        overflow: hidden;
+        border: 0 none;
+
+        img{
+            .w(375);
+            .h(200);
+            background-size:cover;
+        }
+
+      }
+
+}
+
+
+// HomeNav 组件样式
+.HomeNav{
+    .w(375);
+    .h(160);
+    background:#fcf;
+    display: flex;
+
+    img{
+        .w(22);
+        .h(22);
+    }
+
+    li{
+        .w(75);
+        .h(80);
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        background:#fc0;
+        .mt(6);
+
+        a{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            span{
+                display: block;
+                .w(44);
+                .h(44);
+                background: red;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                margin:auto;
+                .mb(5);
+                img{
+                    margin:auto;
+                }
+            }
+        }
+    }
+
+}

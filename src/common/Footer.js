@@ -63,7 +63,7 @@ class Footer extends Component{
 		return (
 			<div>
 				<footer>
-					<div>
+					<div className="content">
 						{
 							this.state.Footer.map(item=>{
 								return (				

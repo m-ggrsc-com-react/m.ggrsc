@@ -24,7 +24,14 @@ module.exports = {
     devServer:{
         contentBase:'./src/',
         port:1809,
-        open:true
+        open:true,
+        proxy: {
+            "/api": {
+              target: 'http://www.ggrsc.com/',
+              changeOrigin: true,
+              pathRewrite: {'^/api' : ''}
+            }
+        },        
     },
 
     resolve:{
@@ -50,13 +57,28 @@ module.exports = {
                     loader:require.resolve('babel-loader'),
                     // 配置loader选项
                     options:{
-                        presets:['env','react','stage-0'], //编译ES6->ES5,JSX->JS
-                        plugins: [
-                            ["import", { libraryName: "antd-mobile", style: "css" }]
+                        presets:['env','react','stage-0'], //编译ES6->ES5,JSX->JS                        
+                        "plugins": [
+                            ["import", {
+                              "libraryName": "antd",
+                              "libraryDirectory": "es",
+                              "style": "css" // `style: true` 会加载 less 文件
+                            }],
+                            [
+                                "transform-runtime",
+                                {
+                                    "helpers": false,
+                                    "polyfill": false,
+                                    "regenerator": true,
+                                    "moduleName": "babel-runtime"
+                                }
+                            ]
                         ]
                     }
                 }
             },
+
+            
 
             // 样式加载器
             {
