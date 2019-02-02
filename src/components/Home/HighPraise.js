@@ -7,7 +7,6 @@ class HighPraise extends Component {
 
     render(){
         let data = this.props.data;
-        console.log(data)
         return (
             <div className="HighPraise">
                 <div className="HighPraise_Title">

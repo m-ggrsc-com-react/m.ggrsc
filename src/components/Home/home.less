@@ -463,17 +463,41 @@
 
 // 返回顶部
 .ReturnToTheTop{
+    position: relative;
+    z-index: 20;
     overflow: hidden;
     display: flex;
     text-align: center;
     background:#fff;
     .mt(10);
     .fs(12);
-    .mb(50);
+    .mb(30);
 
     li{
         flex:1;
         .lh(38);
         color: #555;
     }
+}
+
+.ant-back-top{
+    .w(40);
+    .h(40);
+    position: fixed;
+    z-index: 10;
+    .right(3);
+    .bottom(53);
+}
+.ReturnToTheTopS{
+    .w(40);
+    .h(40);
+    position: fixed;
+    z-index: 1;
+    .right(3);
+    .bottom(53);
+    border-radius:50%;
+    background:url(http://m.ggrsc.com/images/gotop_b.png)  #fff no-repeat center;
+    background-size:50%;
+    opacity: 0.8;
+    border:1px #ddd solid;
 }

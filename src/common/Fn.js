@@ -1,17 +1,23 @@
 import React,{Component} from "react" ;
 
+import {Route,NavLink,Switch,Redirect,withRouter} from 'react-router-dom';
+
 import Home from "@components/Home" ; 
 import Classify from "@components/Classify" ; 
 import Search from "@components/Search" ; 
 import ShoppingTrolley from "@components/Shopping-trolley" ; 
 import My from "@components/My" ; 
 
+console.dir(Classify)
+
 import "@less/common/Footer.less" ;
 
 class Fn extends Component{
-    constructor(){
-        super();
-                    
+    constructor(props){
+        super(props);
+        
+        this.change = this.change.bind(this);
+
         this.state = {
             Footer:[
                 {
@@ -47,26 +53,47 @@ class Fn extends Component{
                 }
             ],			
         }
-}
 
-    render(){
+    }
+    
+    change(item){
+        this.props.history.push(item.path);
+        
+    }
+    
+    
+    render(props){
         return (
-            <footer>
-                {
-                    this.state.Footer.map(item=>{
-                        return (				
-                            <div  key={item.path}>
-                                <svg className="icon-svg" aria-hidden="true">
-                                    <use xlinkHref={item.icon}></use>
-                                </svg>
-                                {item.title}
-                            </div>
-                        )
-                    })
-                }
-            </footer>
+            <div>
+                <footer>
+                    {
+                        this.state.Footer.map(item=>{
+                            return (				
+                                <div key={item.path} onClick={() =>{
+                                    this.change(item)
+                                }}>
+                                    <svg className="icon-svg" aria-hidden="true">
+                                        <use xlinkHref={item.icon}></use>
+                                    </svg>
+                                    {item.title}
+                                </div>
+                            )
+                        })
+                    }
+                    <Switch>
+                        {
+                            this.state.Footer.map(item=>{
+                                return (				
+                                    <Route path={item.path} component={item.component} key={item.path}></Route>									
+                                )
+                            })
+                        }
+                        <Redirect from="/" to="/Home"/>
+                    </Switch>
+                </footer>
+            </div>
         )
     }
 }
-
+Fn = withRouter(Fn)
 export default Fn ;

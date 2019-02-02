@@ -3,7 +3,7 @@ import React,{Component} from "react" ;
 // 引入组件
 // import Footer from "@common/Footer1" ;
 import http from "@/server.js" ;
-
+import "@less/reset.less" ;
 
 // 引入样式
 import "./home.less" ;
@@ -16,6 +16,7 @@ import Notice from "./Notice" ;
 import ContentTop from "./Content_Top" ;
 import ReturnToTheTop from "@common/ReturnToTheTop" ;
 import Fn from "@common/Fn.js" ;
+import ReturnToTheTopS from "@common/ReturnToTheTopS" ;
 
 class Home extends Component {
     constructor (){
@@ -28,7 +29,6 @@ class Home extends Component {
     async componentDidMount(){
         const res = await http.get("/api/mobile/index.php/",{act:"index"}) ; 
         this.setState({data:res.data.datas}) ;
-        console.log(this.state.data)
     }
     
     render(){
@@ -54,6 +54,7 @@ class Home extends Component {
                     <ContentTop data={ContentTopData} />
                     <ReturnToTheTop/>
                     <Fn/>
+                    <ReturnToTheTopS/>
                 </div>
             )
         }else{
