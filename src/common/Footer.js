@@ -95,24 +95,5 @@ class Footer extends Component{
 	}
 }
 
-{/* <TabBar			
-	onClick = { this.current }
-	tabBarPosition="bottom"
->
-	{
-		this.state.Footer.map(item=>{
-			return (								
-				<TabBar.Item
-					onClick = { this.current }
-					icon = {{ uri: item.icon }}
-					title = { item.title }
-					dot = { item.dot ? item.dot : "" }
-					key = { item.path }
-				>							
-				</TabBar.Item>
-			)
-		})
-	}										
-</TabBar> */}
 Footer = withRouter(Footer);
 export default Footer;

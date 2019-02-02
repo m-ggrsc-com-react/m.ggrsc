@@ -1,6 +1,6 @@
 import React,{Component} from "react" ;
 
-import Footer from "@common/Footer" ;
+import Home from "@components/Home" ;
 
 
 class App extends Component {
@@ -18,7 +18,7 @@ class App extends Component {
 	render(){
 		return (
 			<div>				
-				<Footer />
+				<Home/>
 			</div>
 		)
 	}

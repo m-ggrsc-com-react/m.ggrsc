@@ -1,7 +1,7 @@
 import React,{Component} from "react" ;
 
 // 引入组件
-import Footer from "@common/Footer" ;
+// import Footer from "@common/Footer1" ;
 import http from "@/server.js" ;
 
 
@@ -13,10 +13,9 @@ import Banner from "./Banner" ;
 import Header from "./Header" ;
 import HomeNav from "./HomeNav" ;
 import Notice from "./Notice" ;
-
 import ContentTop from "./Content_Top" ;
-
-
+import ReturnToTheTop from "@common/ReturnToTheTop" ;
+import Fn from "@common/Fn.js" ;
 
 class Home extends Component {
     constructor (){
@@ -44,6 +43,7 @@ class Home extends Component {
                 HomeAlikeDataDXZM:data[5],
                 HomeAlikeDataZS:data[6],
                 HomeAlikeDataBGSB:data[7],
+                HomeAlikeDataHPB:data[8],
             }
             return (            
                 <div id="home">
@@ -52,6 +52,8 @@ class Home extends Component {
                     <HomeNav/>
                     <Notice/>
                     <ContentTop data={ContentTopData} />
+                    <ReturnToTheTop/>
+                    <Fn/>
                 </div>
             )
         }else{

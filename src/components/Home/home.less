@@ -1,7 +1,6 @@
 @import "../../less/main.less";
 
 #app{
-    .h(3000);
     background:#f0f0f0;
     overflow: hidden;
 }
@@ -252,9 +251,9 @@
 // 热卖印刷品
 .title{
     .w(369);
-    .h(18);
-    .fs(16);
-    .lh(18);
+    .h(16);
+    .fs(14);
+    .lh(16);
     float:right;
     border-left:4px #ed5564 solid;;
     .pl(10);
@@ -374,5 +373,107 @@
         .w(375);
         .h(71.48);
         background-size:cover;
+    }
+}
+
+// 好评榜
+.HighPraise{
+    background:#fff;
+    overflow: hidden;
+    .mt(12);
+
+    .HighPraise_Title{
+        .w(375);
+        .h(50);
+        .mt(20);
+        text-align: center;
+        .lh(20);
+        .fs(14);
+
+        .HighPraise_TitleBottom{
+            .fs(12);
+            position: relative;
+            .top(10);
+            span{
+                display: inline-block;
+                .w(150);
+                color: #999;
+                background:#fff;
+                position: absolute;
+                z-index: 2;
+                left: 50%;
+                top:50%;
+                transform: translate(-50%,-50%);
+            }
+            div{
+                .w(187.5);
+                .h(1);
+                background:#999;
+                position: absolute;
+                left: 50%;
+                top:50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+    }
+
+    .HighPraise_Content{
+        .w(375);
+        overflow: hidden;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap:wrap;
+        li{
+            .w(176.25);
+            .mb(5);
+            overflow: hidden;
+
+            .HighPraise_ContentBottom{
+                .mt(5);
+                width: 100%;
+                .fs(12);
+                .h(80);
+                word-break:break-all;
+                overflow: hidden;
+                display: flex;
+                flex-direction:column;
+                justify-content: space-between;
+                
+                a{
+                    color: #000;                    
+                }
+
+                p{
+                    border-top:1px #eee solid;
+                    margin:0;
+                    padding:0;
+                    color: #db4453;
+                    .lh(22);
+                    font-weight: bold;
+                }
+            }
+        }
+
+        img{
+            .w(176.25);
+            .h(176.25);
+        }
+    }
+}
+
+// 返回顶部
+.ReturnToTheTop{
+    overflow: hidden;
+    display: flex;
+    text-align: center;
+    background:#fff;
+    .mt(10);
+    .fs(12);
+    .mb(50);
+
+    li{
+        flex:1;
+        .lh(38);
+        color: #555;
     }
 }

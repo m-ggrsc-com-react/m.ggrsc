@@ -5,6 +5,7 @@ import Sales from "./Sales" ;
 import HomeAlikeImg from "@common/HomeAlikeImg.js"
 import HomeAlikeImgBottom from "@common/HomeAlikeImgBottom" ;
 import Poster from "@common/poster" ;
+import HighPraise from "./HighPraise"
 
 class ContentTop extends Component {
     constructor(props){
@@ -30,6 +31,7 @@ class ContentTop extends Component {
                 </div>
                 
                 <HomeAlikeImgBottom data={data. HomeAlikeDataBGSB.home4}/>
+                <HighPraise data={data.HomeAlikeDataHPB.goods}/>
             </div>
         )
     }
