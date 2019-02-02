@@ -239,6 +239,16 @@
     }
 }
 
+// 江苏厂商促销区
+.sales{
+    overflow: hidden;
+    img{
+        .w(375);
+        .h(155.68);
+        background-size:cover;
+    }
+}
+
 // 热卖印刷品
 .title{
     .w(369);
@@ -250,10 +260,12 @@
     .pl(10);
     .margin(10,0,10,10);
 }
+
 .homeAlike{
     overflow: hidden;
         
 }
+
 .content{
     .w(375);
     .h(152.34);
@@ -265,12 +277,12 @@
         left: 0;
         top: 0;
         overflow: hidden;
-        box-sizing: border-box;
-        border-bottom:1px #eee solid;
         
         img{
             .w(187.5);
+            box-sizing: border-box;
             .h(152.34);
+            border-bottom:1px #eee solid;
             background-size:cover;
         }
 
@@ -284,6 +296,7 @@
         img{
             .w(186.5);
             .h(75.77);
+            background-size: cover;
         }
     }
     .right_top{
@@ -299,59 +312,67 @@
     }
 }
 
-// 江苏厂商促销区
-.sales{
+.HomeAlikeImgBottom{
+    .w(375);
+    .h(152.34);
+    overflow: hidden;
+    position: relative;
+
+    .left{            
+        position: absolute;
+        right: 0;
+        top: 0;
+        overflow: hidden;
+        
+        img{
+            .w(187.5);
+            .h(152.34);
+            background-size:cover;
+            box-sizing: border-box;
+            border-bottom:1px #eee solid;
+        }
+
+    }
+    .right_top,.right_bottom{
+        box-sizing: border-box;
+        overflow: hidden;
+        border-right:1px #eee solid;
+        border-bottom:1px #eee solid;
+        
+        img{
+            .w(187.5);
+            .h(75.77);
+        }
+    }
+    .right_top{
+        position: absolute;
+        left: 0;
+        top: 0;
+
+    }
+    .right_bottom{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+// 印刷海报
+.posterImg{
     overflow: hidden;
     img{
         .w(375);
-        .h(155.68);
+        .h(152.35);
         background-size:cover;
     }
 }
 
-// contentTOP
-.contentTop{
+// 招商
+.posterImg2{
     overflow: hidden;
-    .HomeAlikeImg{
-        overflow: hidden;
-        position: relative;
-    
-        .left{            
-            position: absolute;
-            right: 0;
-            top: 0;
-            overflow: hidden;
-            box-sizing: border-box;
-            border-bottom:1px #eee solid;
-            
-            img{
-                .w(187.5);
-                .h(152.34);
-                background-size:cover;
-            }
-    
-        }
-        .right_top,.right_bottom{
-            box-sizing: border-box;
-            overflow: hidden;
-            border-right:1px #eee solid;
-            border-bottom:1px #eee solid;
-            
-            img{
-                .w(186.5);
-                .h(75.77);
-            }
-        }
-        .right_top{
-            position: absolute;
-            left: 0;
-            top: 0;
-    
-        }
-        .right_bottom{
-            position: absolute;
-            left: 0;
-            bottom: 0;
-        }
+    img{
+        .w(375);
+        .h(71.48);
+        background-size:cover;
     }
 }

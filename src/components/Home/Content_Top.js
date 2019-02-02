@@ -1,9 +1,10 @@
 import React,{Component} from "react" ;
 
-import HomeAlike from "@common/Home_alike.js" ;
+import HomeAlike from "@common/Home_alike" ;
 import Sales from "./Sales" ;
-import HomeAlikeImg from "@common/homeAlikeImg.js" ;
-import HomeAlikeImgBottom from "@common/homeAlikeImgBottom.js" ;
+import HomeAlikeImg from "@common/HomeAlikeImg.js"
+import HomeAlikeImgBottom from "@common/HomeAlikeImgBottom" ;
+import Poster from "@common/poster" ;
 
 class ContentTop extends Component {
     constructor(props){
@@ -17,7 +18,18 @@ class ContentTop extends Component {
             <div className="HomeAlikeImg">
                 <Sales data={data.SalesData}/>
                 <HomeAlike data={data.HomeAlikeData}/>
-                <HomeAlikeImg data={data.HomeAlikeDatazp.home4}/>
+                <HomeAlikeImgBottom data={data.HomeAlikeDatazp.home4}/>
+                <div className="posterImg">
+                    <Poster data={data.HomeAlikeDataYS.home1}/>
+                </div>
+
+                <HomeAlikeImg data={data.HomeAlikeDataDXZM.home2}/>
+
+                <div className="posterImg2">
+                    <Poster data={data.HomeAlikeDataZS.home1}/>
+                </div>
+                
+                <HomeAlikeImgBottom data={data. HomeAlikeDataBGSB.home4}/>
             </div>
         )
     }

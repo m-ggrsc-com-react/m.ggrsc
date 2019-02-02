@@ -39,7 +39,11 @@ class Home extends Component {
             let ContentTopData = {
                 SalesData:data[1],
                 HomeAlikeData:data[2],
-                HomeAlikeDatazp:data[3]
+                HomeAlikeDatazp:data[3],
+                HomeAlikeDataYS:data[4],
+                HomeAlikeDataDXZM:data[5],
+                HomeAlikeDataZS:data[6],
+                HomeAlikeDataBGSB:data[7],
             }
             return (            
                 <div id="home">
