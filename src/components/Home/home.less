@@ -1,5 +1,11 @@
 @import "../../less/main.less";
 
+#app{
+    .h(3000);
+    background:#f0f0f0;
+    overflow: hidden;
+}
+
 //   Header 组件样式
 #header {
     position: fixed;
@@ -107,6 +113,7 @@
     display: flex;
     justify-content: space-around;
     flex-wrap:wrap;
+    background:#fff;
     margin:0;    
 
     img{
@@ -187,6 +194,7 @@
     overflow: hidden;
     justify-content: space-between;
     align-items: center;
+    background:#fff;
     a{
         color: #676b70;
         .fs(12);
@@ -231,7 +239,119 @@
     }
 }
 
-.nctouch-home-layout{
-    background:red;
-    .h(1000);
+// 热卖印刷品
+.title{
+    .w(369);
+    .h(18);
+    .fs(16);
+    .lh(18);
+    float:right;
+    border-left:4px #ed5564 solid;;
+    .pl(10);
+    .margin(10,0,10,10);
+}
+.homeAlike{
+    overflow: hidden;
+        
+}
+.content{
+    .w(375);
+    .h(152.34);
+    overflow: hidden;
+    position: relative;
+
+    .left{            
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        box-sizing: border-box;
+        border-bottom:1px #eee solid;
+        
+        img{
+            .w(187.5);
+            .h(152.34);
+            background-size:cover;
+        }
+
+    }
+    .right_top,.right_bottom{
+        box-sizing: border-box;
+        overflow: hidden;
+        border-left:1px #eee solid;
+        border-bottom:1px #eee solid;
+        
+        img{
+            .w(186.5);
+            .h(75.77);
+        }
+    }
+    .right_top{
+        position: absolute;
+        right: 0;
+        top: 0;
+
+    }
+    .right_bottom{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+// 江苏厂商促销区
+.sales{
+    overflow: hidden;
+    img{
+        .w(375);
+        .h(155.68);
+        background-size:cover;
+    }
+}
+
+// contentTOP
+.contentTop{
+    overflow: hidden;
+    .HomeAlikeImg{
+        overflow: hidden;
+        position: relative;
+    
+        .left{            
+            position: absolute;
+            right: 0;
+            top: 0;
+            overflow: hidden;
+            box-sizing: border-box;
+            border-bottom:1px #eee solid;
+            
+            img{
+                .w(187.5);
+                .h(152.34);
+                background-size:cover;
+            }
+    
+        }
+        .right_top,.right_bottom{
+            box-sizing: border-box;
+            overflow: hidden;
+            border-right:1px #eee solid;
+            border-bottom:1px #eee solid;
+            
+            img{
+                .w(186.5);
+                .h(75.77);
+            }
+        }
+        .right_top{
+            position: absolute;
+            left: 0;
+            top: 0;
+    
+        }
+        .right_bottom{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
 }

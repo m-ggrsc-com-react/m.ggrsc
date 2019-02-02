@@ -13,7 +13,8 @@ import Banner from "./Banner" ;
 import Header from "./Header" ;
 import HomeNav from "./HomeNav" ;
 import Notice from "./Notice" ;
-import HomeAlike from "@/common/Home_alike" ;
+
+import ContentTop from "./Content_Top" ;
 
 
 
@@ -32,14 +33,21 @@ class Home extends Component {
     }
     
     render(){
-        if(this.state.data.length>0){            
+        if(this.state.data.length>0){    
+            let data = this.state.data;
+
+            let ContentTopData = {
+                SalesData:data[1],
+                HomeAlikeData:data[2],
+                HomeAlikeDatazp:data[3]
+            }
             return (            
                 <div id="home">
                     <Header/>
-                    <Banner bannerText={this.state.data[0]}/>
+                    <Banner bannerText={data[0]}/>
                     <HomeNav/>
                     <Notice/>
-                    <HomeAlike data={this.state.data[2]} />
+                    <ContentTop data={ContentTopData} />
                 </div>
             )
         }else{
