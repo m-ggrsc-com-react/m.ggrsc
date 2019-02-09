@@ -1,24 +1,19 @@
 import React,{Component} from "react" ;
 
-import {Route,Switch,Redirect,withRouter} from 'react-router-dom';
-
 import Home from "@components/Home" ; 
 import Classify from "@components/Classify" ; 
 import Search from "@components/Search" ; 
 import ShoppingTrolley from "@components/Shopping-trolley" ; 
 import My from "@components/My" ; 
 
-
-class App extends Component {
-	
-	constructor (){
-		super();
-
-		this.state = {
-			Route:[
-				{
+class HeaderRight extends Component {
+    constructor(){
+        super() ;
+        this.state = {
+            data:[
+                {
                     title:"首页",
-                    icon:"#icon-home",
+                    icon:"#icon-home3",
                     path:"/Home",
                     component:Home				
                 },
@@ -39,7 +34,6 @@ class App extends Component {
                     icon:"#icon-icon1",
                     path:"/Shopping-trolley",
                     component:ShoppingTrolley,
-                    dot:true,
                 },
                 {
                     title:"我的商城",
@@ -47,37 +41,33 @@ class App extends Component {
                     path:"/My",
                     component:My
                 }
-			]
-		}
-	}
+            ]
+        }
+    }
 
-
-	render(){
-		return (			
-			<Switch>
-				{
-					this.state.Route.map(item=>{
-						return (				
-							<Route path={item.path} component={item.component} key={item.path}></Route>									
-						)
-					})
-				}
-				<Redirect from="/" to="/Home"/>
-			</Switch>
-		)
-	}
-
+    render(){
+        return (
+            <div className="HeaderRight">
+                <span className="arrow"></span>
+                <ul>
+                    {
+                        this.state.data.map((item,idx)=>{
+                            return (
+                                <li key={item.path}>
+                                    <a href="javascript:;">
+                                        <svg className="icon-svg" aria-hidden="true">
+                                            <use xlinkHref={item.icon}></use>
+                                        </svg>
+                                        {item.title}
+                                    </a>
+                                </li>
+                            )
+                        })
+                    }
+                </ul>
+            </div>
+        )
+    }
 }
 
-App = withRouter(App) ;
-
-export default App;
-
-
-
-
-
-
-
-
-
+export default HeaderRight ;

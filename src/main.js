@@ -11,9 +11,6 @@ import "./less/reset.less" ;
 // 引入路由
 import {HashRouter} from "react-router-dom";
 
-// 引入可以axios
-
-
 
 // 引入组件
 import App from "./App" ;

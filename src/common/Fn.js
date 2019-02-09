@@ -8,7 +8,7 @@ import Search from "@components/Search" ;
 import ShoppingTrolley from "@components/Shopping-trolley" ; 
 import My from "@components/My" ; 
 
-console.dir(Classify)
+// console.dir(Classify)
 
 import "@less/common/Footer.less" ;
 
@@ -57,41 +57,32 @@ class Fn extends Component{
     }
     
     change(item){
-        this.props.history.push(item.path);
-        
+        this.props.history.push(item.path);        
     }
     
+    goDetailWithParam(item){
+        let path = item.path ;
+        this.props.history.push({pathname : path,state:{item}});
+    }
     
     render(props){
         return (
-            <div>
-                <footer>
-                    {
-                        this.state.Footer.map(item=>{
-                            return (				
-                                <div key={item.path} onClick={() =>{
-                                    this.change(item)
-                                }}>
-                                    <svg className="icon-svg" aria-hidden="true">
-                                        <use xlinkHref={item.icon}></use>
-                                    </svg>
-                                    {item.title}
-                                </div>
-                            )
-                        })
-                    }
-                    <Switch>
-                        {
-                            this.state.Footer.map(item=>{
-                                return (				
-                                    <Route path={item.path} component={item.component} key={item.path}></Route>									
-                                )
-                            })
-                        }
-                        <Redirect from="/" to="/Home"/>
-                    </Switch>
-                </footer>
-            </div>
+            <footer>
+                {
+                    this.state.Footer.map(item=>{
+                        return (				
+                            <div key={item.path} onClick={() =>{
+                                this.change(item)
+                            }}>
+                                <svg className="icon-svg" aria-hidden="true">
+                                    <use xlinkHref={item.icon}></use>
+                                </svg>
+                                {item.title}
+                            </div>
+                        )
+                    })
+                }
+            </footer>
         )
     }
 }
