@@ -25,7 +25,6 @@ class Search extends Component {
             data:res.data.datas.list
         })
 
-        console.log(this.state.data)
     }
 
     render(){

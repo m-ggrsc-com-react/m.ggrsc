@@ -1,14 +1,27 @@
 import React,{Component} from "react" ;
 
-class MyHeader Component {
+// 引入组件
+import HeaderTop from "@common/HeaderCommon" ;
+import UsarName from "./UserName" ;
+import HeaderBottom from "./HeaderBottom" ;
+
+class MyHeader extends Component {
     constructor(){
         super();
+        
+        this.state = {
+            SettingsIcon:"http://m.ggrsc.com/images/set_w.png",          
+        }
 
     }
 
     render(){
         return (
-            <div>header</div>
+            <div className="MyHeader">
+                <HeaderTop SettingsIcon={this.state.SettingsIcon} />
+                <UsarName/>
+                <HeaderBottom/>
+            </div>
         )
     }
 }

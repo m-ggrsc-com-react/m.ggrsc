@@ -1,5 +1,9 @@
 import React,{Component} from "react" ;
 
+// 引入样式
+import "@less/common/HeaderCommon.less"
+
+// 引入组件
 import HeaderRightContent from "@common/HeaderContent" ;
 
 // 引入路由组件
@@ -10,7 +14,7 @@ import ShoppingTrolley from "@components/Shopping-trolley" ;
 import My from "@components/My" ; 
 import Message from "@/components/Message" ;
 
-class Header extends Component{
+class HeaderCommon extends Component {
     constructor(){
         super();
 
@@ -45,12 +49,6 @@ class Header extends Component{
                     icon:"http://m.ggrsc.com/images/cart_w.png",
                     path:"/Shopping-trolley",
                     component:ShoppingTrolley,
-                },
-                {
-                    title:"我的商城",
-                    icon:"http://m.ggrsc.com/images/member_w.png",
-                    path:"/My",
-                    component:My
                 }
             ]
         }
@@ -58,23 +56,12 @@ class Header extends Component{
 
     render(){
         return (
-            <header className="header">
-                <div className="logo">
-                    <svg className="icon-svg" aria-hidden="true">
-                        <use xlinkHref="#icon-zuobian4"></use>
-                    </svg>
-                </div>
-                <div className="header-wrap">
-                    <div href="javascript:;" className="header-inp">
-                        <i></i>
-                        <span>高档画册</span>
-                    </div>
-                </div>
-                <HeaderRightContent HeaderRightData={this.state.HeaderRightData} />
-            </header>
+            <div className="HeaderTop">
+                <img src={this.props.SettingsIcon} alt=""/>
+                <HeaderRightContent HeaderRightData={this.state.HeaderRightData}/>
+            </div>
         )
     }
 }
 
-
-export default Header ;
+export default HeaderCommon ;

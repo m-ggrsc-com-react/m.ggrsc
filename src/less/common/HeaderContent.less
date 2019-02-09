@@ -1,0 +1,55 @@
+@import "../main.less" ;
+@import "../reset.less" ;
+
+.header-r{
+    .w(24); 
+    .h(40);
+
+    .ant-badge{
+        .mt(10);
+    }
+    .icon-svg{
+        .fs(22);
+    }
+
+    .HeaderRight{
+        .right(5);
+        .top(32);
+        overflow: hidden;
+        border:rgba(85, 85, 85, 0.95);  
+        ul{ 
+            left: 0;
+            right: 0;
+            background:rgba(85, 85, 85, 0.95);  
+            width: 100%;
+            overflow: hidden; 
+            .border-radius(5);
+            li{
+                
+                a{
+                    display: flex;
+                    .lh(40);
+                    align-items: center;
+                    color: #fff;
+                    border-bottom:1px #fff solid;
+                    box-sizing: border-box;                    
+                }
+                
+            }
+        }
+    
+        .arrow{
+            display: block;
+            float: right;
+            width: 0;
+            height: 0;
+            font-size: 0;
+            line-height: 0;
+            .mr(10);
+            border-width: 8px;
+            border-color: transparent transparent rgba(85, 85, 85, 0.95) transparent;
+            border-style: dashed dashed solid dashed;
+        }
+    
+    }
+}

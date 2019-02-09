@@ -1,7 +1,14 @@
 import React,{Component} from "react" ;
 
+// 引入样式
+import "./My.less" ;
+
+
 // 引入组件
-import Footer from "@common/Footer" ;
+import Header from "./MyHeader" ;
+import MyContent from "./MyContent"
+import ReturnToTheTop from "@common/ReturnToTheTop" ;
+import Footer from "@common/Fn" ;
 
 class My extends Component {
     constructor (){
@@ -11,7 +18,10 @@ class My extends Component {
     render(){
         return (
             <div>
-                我的商城
+                <Header/>
+                <MyContent/>
+                <ReturnToTheTop/>
+                <Footer/>
             </div>
         )
     }

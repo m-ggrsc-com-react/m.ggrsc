@@ -17,7 +17,6 @@ class ClssRight extends Component {
 
         const res = await http.get("/api/mobile/index.php?act="+"goods_class&op="+"get_child_all&gc_id="+this.state.gc_id) ; 
 
-        console.log(res);
     }
 
     render(props){        
