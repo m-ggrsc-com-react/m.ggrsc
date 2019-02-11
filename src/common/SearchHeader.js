@@ -14,9 +14,11 @@ class SearchHeader extends Component{
         return (
             <header className="header">
                 <div className="logo">
-                    <svg className="icon-svg" aria-hidden="true">
-                        <use xlinkHref="#icon-zuobian4"></use>
-                    </svg>
+                    <a href="javascript:history.go(-1)">
+                        <svg className="icon-svg" aria-hidden="true">
+                            <use xlinkHref="#icon-zuobian4"></use>
+                        </svg>
+                    </a>
                 </div>
                 <div className="header-wrap">
                     <a href="javascript:;" className="header-inp">

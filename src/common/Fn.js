@@ -10,6 +10,7 @@ import My from "@components/My" ;
 
 import "@less/common/Footer.less" ;
 
+
 class Fn extends Component{
     constructor(props){
         super(props);
@@ -21,33 +22,28 @@ class Fn extends Component{
                 {
                     title:"首页",
                     icon:"#icon-home",
-                    path:"/Home",
-                    // component:Home				
+                    path:"/Home",                    
                 },
                 {
                     title:"分类",
                     icon:"#icon-fenlei",
-                    path:"/Classify",
-                    // component:Classify
+                    path:"/Classify",                    
                 },
                 {
                     title:"搜索",
                     icon:"#icon-sousuo",
-                    path:"/Search",
-                    // component:Search
+                    path:"/Search",                    
                 },
                 {
                     title:"购物车",
                     icon:"#icon-icon1",
-                    path:"/Shopping-trolley",
-                    // component:ShoppingTrolley,
+                    path:"/Shopping-trolley",                    
                     dot:true,
                 },
                 {
                     title:"我的商城",
                     icon:"#icon-seeusero",
-                    path:"/My",
-                    // component:My
+                    path:"/My",                    
                 }
             ],			
         }

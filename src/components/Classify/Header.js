@@ -1,5 +1,6 @@
 import React,{Component} from "react" ;
 
+import {withRouter} from "react-router-dom" ;
 import HeaderRightContent from "@common/HeaderContent" ;
 
 // 引入路由组件
@@ -56,6 +57,10 @@ class Header extends Component{
         }
     }
 
+    goTo(path){
+        this.props.history.push(path);
+    }
+
     render(){
         return (
             <header className="header">
@@ -64,7 +69,11 @@ class Header extends Component{
                         <use xlinkHref="#icon-zuobian4"></use>
                     </svg>
                 </div>
-                <div className="header-wrap">
+                <div className="header-wrap" onClick={
+                    ()=>{
+                        this.goTo("/Search")
+                    }
+                }>
                     <div href="javascript:;" className="header-inp">
                         <i></i>
                         <span>高档画册</span>
@@ -76,5 +85,5 @@ class Header extends Component{
     }
 }
 
-
+Header = withRouter(Header) ;
 export default Header ;

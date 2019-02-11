@@ -6,7 +6,6 @@ class ContentCon extends Component {
     }
 
     render(){
-        console.log(this.props)
         return (
             <ul className="ContentCon">
                 {

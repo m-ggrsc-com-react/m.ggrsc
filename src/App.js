@@ -8,6 +8,8 @@ import Search from "@components/Search" ;
 import ShoppingTrolley from "@components/Shopping-trolley" ; 
 import My from "@components/My" ; 
 import Message from "@components/Message" ;
+import Reg from "@components/LoginReg/Reg" ;
+import Login from "@components/LoginReg/Login" ;
 
 
 class App extends Component {
@@ -17,40 +19,38 @@ class App extends Component {
 
 		this.state = {
 			Route:[
-				{
-                    // title:"首页",
-                    // icon:"#icon-home",
+				{                                      
                     path:"/Home",
                     component:Home				
                 },
-                {
-                    // title:"分类",
-                    // icon:"#icon-fenlei",
+                {                                      
                     path:"/Classify",
                     component:Classify
                 },
-                {
-                    // title:"搜索",
-                    // icon:"#icon-sousuo",
+                {                                      
                     path:"/Search",
                     component:Search
                 },
-                {
-                    // title:"购物车",
-                    // icon:"#icon-icon1",
+                {                                      
                     path:"/Shopping-trolley",
                     component:ShoppingTrolley,
                     dot:true,
                 },
-                {
-                    // title:"我的商城",
-                    // icon:"#icon-seeusero",
+                {                                      
                     path:"/My",
                     component:My
                 },
                 {
                     path:"/Message",
                     component:Message
+                },
+                {
+                    path:"/Reg",
+                    component:Reg
+                },
+                {
+                    path:"/Login",
+                    component:Login
                 }
 			]
 		}
@@ -75,7 +75,6 @@ class App extends Component {
 }
 
 App = withRouter(App) ;
-
 export default App;
 
 

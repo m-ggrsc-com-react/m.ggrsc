@@ -1,0 +1,106 @@
+@import "../../less/main.less" ; 
+@import "../../less/reset.less" ; 
+
+.Reg{
+    width: 100%;
+    overflow: hidden;
+    .RegCon{
+        .mt(40);
+        width: 100%;
+        .h(40);
+        background:#fff;
+        border-top:1px #eee solid;
+        .mb(10);
+        
+        .RegConTop{
+            box-sizing: border-box;
+            display: flex;      
+            justify-content: space-around;
+            
+            a{    
+                display: flex;
+                text-align: center;
+                .lh(37);        
+                align-items: center;
+                text-decoration: none;
+                border-bottom:2px #fff solid;
+                color: #333;
+                
+                img{
+                    .w(16);
+                    .h(16);
+                    .mr(5);
+                    filter:grayscale(80%);            
+                }
+            }
+            a.active{
+                color: #ed5564;
+                border-bottom:2px #ed5564 solid;
+                box-sizing: border-box;
+                img{
+                    filter:none;            
+                }
+            }
+        }
+    }
+}
+
+
+.Register{
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-box{
+    width: 100%;
+    overflow: hidden;
+    .padding(0,10,0,10);
+    background:#fff;
+
+    li{
+        width: 100%;
+        .h(40);
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        border-bottom: 1px #eee solid;
+
+        h4{
+            .w(60);
+            height: 100%;
+            display: flex;                
+            align-items: center;
+            justify-content: flex-end;
+            color: #444;
+        }
+
+        .input-box{
+            .w(285);
+            height: 100%;
+            position: relative;
+
+            input{
+                border: 0 none;
+                outline: none;
+                width: 100%;
+                height: 100%;
+            }
+
+            .input-del {
+                display: none;
+                position: absolute;
+                z-index: 1;
+                top: 50%;
+                right: 0;
+                .w(20);
+                .h(20);    
+                transform: translateY(-50%,);
+                background-image: url(http://m.ggrsc.com/images/cancel_b.png);
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: 60%;
+                opacity: 0.4;
+            }
+        }
+    }
+}

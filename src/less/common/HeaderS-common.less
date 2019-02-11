@@ -1,0 +1,39 @@
+@import "../main.less";
+@import "../reset.less";
+
+.HeadersCommon{
+    position: fixed;
+    width: 100%;
+    .h(40);
+    left: 0;
+    right: 0;
+    top: 0;
+    background: rgba(248,248,248,0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .padding(0,10,0,10);
+
+    .CommonLeft{
+        overflow: hidden;
+        img{
+            .w(16);
+            .h(16);
+        }
+    }
+
+    .CommonConter{
+        .fs(16);
+        color: #111;
+    }
+
+    .CommonRight{
+        overflow: hidden;
+
+        img{
+            .w(19);
+            .h(19);
+            opacity: 0.65;
+        }
+    }
+}

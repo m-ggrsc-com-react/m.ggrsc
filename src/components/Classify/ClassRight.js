@@ -14,8 +14,7 @@ class ClssRight extends Component {
   
     async componentDidMount(){            
         await this.setState({gc_id:this.props.match.params.gc_id}) ;
-
-        const res = await http.get("/api/mobile/index.php?act="+"goods_class&op="+"get_child_all&gc_id="+this.state.gc_id) ; 
+        // const res = await http.get("/api/mobile/index.php?act="+"goods_class&op="+"get_child_all&gc_id="+this.state.gc_id) ; 
 
     }
 
