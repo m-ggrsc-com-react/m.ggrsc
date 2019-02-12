@@ -26,7 +26,7 @@ class Home extends Component {
         }
     }
 
-    async componentDidMount(){
+    async componentWillMount(){
         const res = await http.get("/api/mobile/index.php/",{act:"index"}) ; 
         this.setState({data:res.data.datas}) ;
     }

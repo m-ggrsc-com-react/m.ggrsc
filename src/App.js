@@ -8,8 +8,11 @@ import Search from "@components/Search" ;
 import ShoppingTrolley from "@components/Shopping-trolley" ; 
 import My from "@components/My" ; 
 import Message from "@components/Message" ;
+import Productlist from "@components/Productlist" ;
+
 import Reg from "@components/LoginReg/Reg" ;
 import Login from "@components/LoginReg/Login" ;
+
 
 
 class App extends Component {
@@ -43,6 +46,10 @@ class App extends Component {
                 {
                     path:"/Message",
                     component:Message
+                },
+                {
+                    path:"/Productlist/:gc_id",
+                    component:Productlist
                 },
                 {
                     path:"/Reg",

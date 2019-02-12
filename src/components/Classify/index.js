@@ -5,7 +5,7 @@ import "./Classify.less";
 
 // 引入组件
 import Header from "./Header" ;
-import ClassLeft from "./ClassLeft" ;
+import Content from "./Content" ;
 
 
 class Classify extends Component {
@@ -17,7 +17,7 @@ class Classify extends Component {
         return (
             <div id="Classify">
                 <Header/>
-                <ClassLeft/>
+                <Content/>
             </div>
         )
     }
